@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>EDA: Consumo de Álcool e Cigarro</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>SmokeDrink</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#contexto">Contexto</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#conclusao">Conclusão</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Classificação de Fumante e/ou Bebedor</h2>
+            </div>
+        </section>
+
+        <main id="main">
+            <section id="inicio">
+                <div class="intro">
+                    <h2>Bem-vindo à Análise Exploratória de Dados</h2>
+                    <p>
+                        Este projeto apresenta os resultados da análise exploratória de dados de um estudo sobre o consumo de álcool e cigarro em
+                        diferentes populações. A seguir, você encontrará uma análise detalhada com gráficos e insights importantes.
+                    </p>
+                </div>
+            </section>
+
+            <section id="contexto">
+                <div class="context">
+                    <h2>Contexto do Estudo</h2>
+                    <p>
+                        A análise exploratória foi realizada em uma base de dados de pessoas que consomem álcool e/ou cigarro, com o objetivo de
+                        identificar padrões de comportamento e possíveis correlações entre os dois hábitos. Os dados foram coletados de uma pesquisa
+                        populacional, e a análise foi realizada utilizando técnicas de EDA para explorar as variáveis relacionadas ao consumo de
+                        bebidas alcoólicas e cigarro.
+                    </p>
+                </div>
+            </section>
+
+            <section id="carrossel">
+                <h2>Gráficos Gerais</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item active">
+                            <img src="imgs/histograma.png" alt="Gráfico Geral 1" />
+                            <img src="imgs/histograma-balanceado.png" alt="Gráfico Geral 1" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/distribuicao-kde.png" alt="Gráfico Geral 2" />
+                            <img src="imgs/distribuicao-kde-balanceado.png" alt="Gráfico Geral 2" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/boxplots.png" alt="Gráfico Geral 3" />
+                            <img src="imgs/boxplots-balanceado.png" alt="Gráfico Geral 3" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/grafico-coluna.png" alt="Gráfico Geral 4" />
+                            <img src="imgs/grafico-coluna-balanceado.png" alt="Gráfico Geral 4" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/grafico-pizza.png" alt="Gráfico Geral 5" />
+                            <img src="imgs/grafico-pizza-balanceado.png" alt="Gráfico Geral 5" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/grafico-linha.png" alt="Gráfico Geral 6" />
+                            <img src="imgs/grafico-linha-balanceado.png" alt="Gráfico Geral 6" />
+                        </div>
+                    </div>
+                    <button class="prev-btn">&#10094;</button>
+                    <button class="next-btn">&#10095;</button>
+                </div>
+            </section>
+
+            <section id="resultados">
+                <div class="results">
+                    <h2>Resultados da Análise</h2>
+                    <p>Selecione o gráfico que deseja visualizar:</p>
+                    <div class="options">
+                        <button onclick="mostrarGrafico('grafico1')">Pressão Sistólica x Diastólica por Status de Fumante</button>
+                        <button onclick="mostrarGrafico('grafico2')">Heatmap</button>
+                        <button onclick="mostrarGrafico('grafico3')">Consumo de Álcool por Faixa Etária</button>
+                        <button onclick="mostrarGrafico('grafico4')">Fumantes e Não Fumantes por Faixa Etária</button>
+                        <button onclick="mostrarGrafico('grafico5')">Glicose x Colesterol por Estado de Fumante</button>
+                        <button onclick="mostrarGrafico('grafico6')">Consumo de Álcool por Faixa de Peso</button>
+                        <button onclick="mostrarGrafico('grafico7')">Média de Colesterol Total por Consumo de Álcool</button>
+                        <button onclick="mostrarGrafico('grafico8')">Relação entre Consumo de Álcool e Status de Fumante</button>
+                    </div>
+
+                    <div id="graficoContainer" class="grafico">
+                        <h3>Selecione um gráfico para visualizar</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="conclusao">
+                <div class="conclusion">
+                    <h2>Conclusão</h2>
+                    <p>
+                        Com base nos gráficos que você gerou e nas análises, podemos tirar algumas conclusões importantes sobre a relação entre
+                        diferentes variáveis como pressão, glicose, colesterol, consumo de álcool e o estado de fumante:
+                    </p>
+                    <br />
+                    <p>
+                        Uma observação relevante é que fumantes tendem a ter pressão arterial mais elevada, sugerindo um impacto do tabagismo na saúde
+                        cardiovascular, o que está de acordo com estudos que mostram que fumar aumenta o risco de hipertensão.
+                    </p>
+                    <br />
+                    <p>
+                        O gráfico que mostrou o consumo de álcool por faixa etária revelou que o hábito de beber tende a ser mais prevalente entre
+                        pessoas em faixas etárias mais jovens (provavelmente entre 20 e 40 anos).
+                    </p>
+                    <br />
+                    <p>
+                        O gráfico de Fumantes e Não Fumantes por Faixa Etária indicou que, entre os mais jovens, há uma proporção significativa de
+                        fumantes, mas à medida que a idade aumenta, o número de fumantes tende a diminuir.
+                    </p>
+                    <br />
+                    <p>
+                        O gráfico Consumo de Álcool por Faixa de Peso evidenciou que pessoas que bebem tendem a apresentar variações maiores de peso,
+                        mas não houve um padrão claro de que quem bebe tenha peso significativamente diferente de quem não bebe.
+                    </p>
+                    <br />
+                    <p>
+                        A média do colesterol total foi ligeiramente maior para aqueles que consomem álcool. Isso está de acordo com o fato de que o
+                        consumo regular de bebidas alcoólicas pode afetar negativamente o metabolismo lipídico e aumentar o colesterol LDL,
+                        contribuindo para o risco cardiovascular.
+                    </p>
+                    <br />
+                    <p>
+                        O gráfico de barras empilhadas mostrou uma forte correlação entre o consumo de álcool e o status de fumante, com uma proporção
+                        significativa de fumantes também sendo consumidores de álcool.
+                    </p>
+                    <br />
+                    <p>
+                        Essas análises indicam uma relação clara entre o tabagismo, o consumo de álcool e várias condições de saúde, como pressão
+                        arterial elevada, colesterol elevado e distúrbios metabólicos. Fumantes e bebedores tendem a apresentar maior risco de
+                        complicações de saúde, como doenças cardiovasculares e metabólicas, o que reflete a importância de políticas públicas focadas
+                        em reduzir esses comportamentos de risco, especialmente entre as populações mais jovens e de meia-idade.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Projeto desenvolvido como parte de uma análise exploratória de dados sobre o consumo de álcool e cigarro.</p>
+        </footer>
+
+        <script src="js/main.js"></script>
+        <script src="js/carousel.js"></script>
+    </body>
+</html>
