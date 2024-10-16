@@ -13,12 +13,21 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    slideAtual = (slideAtual + 1) % totalSlides;
+    slideAtual++;
+
+    if (slideAtual >= totalSlides) {
+        slideAtual = 0;
+    }
+
     showSlide(slideAtual);
 }
 
 function prevSlide() {
-    slideAtual = slideAtual === 0 ? totalSlides - 1 : slideAtual - 1;
+    if (slideAtual === 0) {
+        slideAtual = totalSlides - 1;
+    } else {
+        slideAtual--;
+    }
     showSlide(slideAtual);
 }
 
