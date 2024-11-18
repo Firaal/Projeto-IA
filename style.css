@@ -91,6 +91,14 @@ header nav ul li a {
     padding: 1rem;
 }
 
+.intro h2 {
+    margin-bottom: 1rem;
+}
+
+.context h2 {
+    margin-bottom: 0.6rem;
+}
+
 /* Estilo para a seção de carrossel */
 .carousel-container {
     position: relative;
