@@ -49,48 +49,14 @@
                 </div>
             </section>
 
-            <section id="carrossel">
-                <h2>Gráficos Gerais</h2>
-                <div class="carousel-container">
-                    <div class="carousel">
-                        <div class="carousel-item active">
-                            <img src="imgs/histograma.png" alt="Gráfico Geral 1" />
-                            <img src="imgs/histograma-balanceado.png" alt="Gráfico Geral 1" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imgs/distribuicao-kde.png" alt="Gráfico Geral 2" />
-                            <img src="imgs/distribuicao-kde-balanceado.png" alt="Gráfico Geral 2" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imgs/boxplots.png" alt="Gráfico Geral 3" />
-                            <img src="imgs/boxplots-balanceado.png" alt="Gráfico Geral 3" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imgs/grafico-coluna.png" alt="Gráfico Geral 4" />
-                            <img src="imgs/grafico-coluna-balanceado.png" alt="Gráfico Geral 4" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imgs/grafico-pizza.png" alt="Gráfico Geral 5" />
-                            <img src="imgs/grafico-pizza-balanceado.png" alt="Gráfico Geral 5" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="imgs/grafico-linha.png" alt="Gráfico Geral 6" />
-                            <img src="imgs/grafico-linha-balanceado.png" alt="Gráfico Geral 6" />
-                        </div>
-                    </div>
-                    <button class="prev-btn">&#10094;</button>
-                    <button class="next-btn">&#10095;</button>
-                </div>
-            </section>
-
             <section id="resultados">
                 <div class="results">
                     <h2>Resultados da Análise</h2>
                     <p>Selecione o gráfico que deseja visualizar:</p>
                     <div class="options">
-                        <button onclick="mostrarGrafico('grafico1')">Pressão Sistólica x Diastólica por Status de Fumante</button>
-                        <button onclick="mostrarGrafico('grafico2')">Heatmap</button>
-                        <button onclick="mostrarGrafico('grafico3')">Consumo de Álcool por Faixa Etária</button>
+                        <button onclick="mostrarGrafico('grafico1')">Consumo de Álcool por Faixa Etária</button>
+                        <button onclick="mostrarGrafico('grafico2')">Pressão Sistólica x Diastólica por Status de Bebedor</button>
+                        <button onclick="mostrarGrafico('grafico3')">Heatmap</button>
                         <button onclick="mostrarGrafico('grafico4')">Fumantes e Não Fumantes por Faixa Etária</button>
                         <button onclick="mostrarGrafico('grafico5')">Glicose x Colesterol por Estado de Fumante</button>
                         <button onclick="mostrarGrafico('grafico6')">Consumo de Álcool por Faixa de Peso</button>
@@ -102,6 +68,96 @@
                         <h3>Selecione um gráfico para visualizar</h3>
                     </div>
                 </div>
+            </section>
+
+            <!-- Seção de Inputs -->
+            <section id="formulario">
+                <h2>Envie seus Dados para a IA</h2>
+                <form id="inputForm" class="form-container">
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="0">Feminino</option>
+                            <option value="1">Masculino</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="pressao_sistolica">Pressão Sistólica:</label>
+                        <input type="number" id="pressao_sistolica" name="pressao_sistolica" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="pressao_diastolica">Pressão Diastólica:</label>
+                        <input type="number" id="pressao_diastolica" name="pressao_diastolica" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="glicose">Glicose:</label>
+                        <input type="number" id="glicose" name="glicose" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="colesterol_total">Colesterol Total:</label>
+                        <input type="number" id="colesterol_total" name="colesterol_total" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="colesterol_hdl">Colesterol HDL:</label>
+                        <input type="number" id="colesterol_hdl" name="colesterol_hdl" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="colesterol_ldl">Colesterol LDL:</label>
+                        <input type="number" id="colesterol_ldl" name="colesterol_ldl" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="triglicerideos">Triglicerídeos:</label>
+                        <input type="number" id="triglicerideos" name="triglicerideos" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="hemoglobina">Hemoglobina:</label>
+                        <input type="number" id="hemoglobina" name="hemoglobina" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="proteina_urinaria">Proteína Urinária:</label>
+                        <input type="number" id="proteina_urinaria" name="proteina_urinaria" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="creatinina_serica">Creatinina Sérica:</label>
+                        <input type="number" id="creatinina_serica" name="creatinina_serica" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="ast">Aspartato Aminotransferase:</label>
+                        <input type="number" id="ast" name="ast" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="alt">Alanina Aminotransferase:</label>
+                        <input type="number" id="alt" name="alt" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="gama_gt">Glutamil Transpeptidase:</label>
+                        <input type="number" id="gama_gt" name="gama_gt" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="estado_fumante">Estado Fumante:</label>
+                        <select id="estado_fumante" name="estado_fumante" required>
+                            <option value="1">Não Fumante</option>
+                            <option value="2">Ex-Fumante</option>
+                            <option value="3">Fumante</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bebedor_ou_nao">Bebedor ou Não:</label>
+                        <select id="bebedor_ou_nao" name="bebedor_ou_nao" required>
+                            <option value="0">Não Bebedor</option>
+                            <option value="1">Bebedor</option>
+                        </select>
+                    </div>
+                    <button type="submit">Enviar para a IA</button>
+                </form>
             </section>
 
             <section id="conclusao">
@@ -158,6 +214,5 @@
         </footer>
 
         <script src="js/main.js"></script>
-        <script src="js/carousel.js"></script>
     </body>
 </html>

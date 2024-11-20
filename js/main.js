@@ -7,20 +7,20 @@ function mostrarGrafico(grafico) {
 
     switch (grafico) {
         case "grafico1":
-            titulo = "Relação entre a pressão sistólica e diastólica por Status de Fumante";
-            descricao = "Pode ajudar a identificar se fumantes apresentam padrões diferentes de pressão arterial em comparação com não fumantes.";
-            imagemSrc = "imgs/scatterplot-sistolica-diastolica.png";
-            break;
-        case "grafico2":
-            titulo = "Heatmap";
-            descricao = "Técnica de visualização de dados que mostra a magnitude de um fenômeno por meio de cor em duas dimensões.";
-            imagemSrc = "imgs/heatmap.png";
-            break;
-        case "grafico3":
             titulo = "Gráfico de Consumo de Álcool por Faixa Etária";
             descricao =
                 "Esse gráfico permitirá visualizar como o consumo de álcool varia entre diferentes faixas etárias, ajudando a identificar tendências e padrões de comportamento entre as idades.";
             imagemSrc = "imgs/consumo-alcool-idade.png";
+            break;
+        case "grafico2":
+            titulo = "Relação entre a pressão sistólica e diastólica por Status de bebedor";
+            descricao = "Pode ajudar a identificar se bebedores apresentam padrões diferentes de pressão arterial em comparação com não bebedores.";
+            imagemSrc = "imgs/scatterplot-sistolica-diastolica-bebedor.png";
+            break;
+        case "grafico3":
+            titulo = "Heatmap";
+            descricao = "Técnica de visualização de dados que mostra a magnitude de um fenômeno por meio de cor em duas dimensões.";
+            imagemSrc = "imgs/heatmap.png";
             break;
         case "grafico4":
             titulo = "Gráfico de Fumantes e Não Fumantes por Faixa Etária";
