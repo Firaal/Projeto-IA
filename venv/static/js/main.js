@@ -20,7 +20,7 @@ function mostrarGrafico(grafico) {
         case "grafico3":
             titulo = "Heatmap";
             descricao = "O heatmap permite visualizar as correlações entre as variáveis da base de dados, destacando relações mais fortes ou fracas entre elas.";
-            imagemSrc = "../static/imgs/heatmap.png";
+            imagemSrc = "../static/imgs/heatmap_por_consumo.png";
             break;
         case "grafico4":
             titulo = "Gráfico de Triglicerídeos por Consumo de Álcool";
