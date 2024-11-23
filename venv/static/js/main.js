@@ -9,29 +9,29 @@ function mostrarGrafico(grafico) {
         case "grafico1":
             titulo = "Gráfico de Consumo de Álcool por Faixa Etária";
             descricao =
-                "Esse gráfico permitirá visualizar como o consumo de álcool varia entre diferentes faixas etárias, ajudando a identificar tendências e padrões de comportamento entre as idades.";
+                "Esse gráfico permite visualizar como o consumo de álcool varia entre diferentes faixas etárias, ajudando a identificar tendências e padrões de comportamento entre as idades.";
             imagemSrc = "../static/imgs/consumo-alcool-idade.png";
             break;
         case "grafico2":
             titulo = "Relação entre a pressão sistólica e diastólica por Status de bebedor";
-            descricao = "Pode ajudar a identificar se bebedores apresentam padrões diferentes de pressão arterial em comparação com não bebedores.";
+            descricao = "Este gráfico permite analisar como o consumo de álcool influencia os níveis de pressão arterial sistólica e diastólica.";
             imagemSrc = "../static/imgs/scatterplot-sistolica-diastolica-bebedor.png";
             break;
         case "grafico3":
             titulo = "Heatmap";
-            descricao = "Técnica de visualização de dados que mostra a magnitude de um fenômeno por meio de cor em duas dimensões.";
+            descricao = "O heatmap permite visualizar as correlações entre as variáveis da base de dados, destacando relações mais fortes ou fracas entre elas.";
             imagemSrc = "../static/imgs/heatmap.png";
             break;
         case "grafico4":
             titulo = "Gráfico de Triglicerídeos por Consumo de Álcool";
             descricao =
-                "Este gráfico permitirá observar como o status de fumante varia entre diferentes faixas etárias, ajudando a identificar padrões de tabagismo.";
+                "Este gráfico permite observar como os níveis de triglicerídeo variam em relação ao consumo de álcool.";
             imagemSrc = "../static/imgs/triglicerideos_por_consumo.png";
             break;
         case "grafico5":
-            titulo = "Relação entre Glicose e Colesterol por Consumo de Álcool";
+            titulo = "Relação entre Glicose e Colesterol Total por Consumo de Álcool";
             descricao =
-                "Este gráfico pode ajudar a entender se há uma relação entre os níveis de glicose e colesterol entre os diferentes grupos de fumantes, o que é crucial para a avaliação do risco cardiovascular e metabólico.";
+                "Este gráfico permite observar a relação entre os níveis de glicose e colesterol total com o consumo de álcool.";
             imagemSrc = "../static/imgs/scatterplot_glicose_colesterol.png";
             break;
         case "grafico6":
@@ -43,7 +43,7 @@ function mostrarGrafico(grafico) {
         case "grafico7":
             titulo = "Gráfico de Barras para ver a relação de fumantes e o consumo de álcool";
             descricao =
-                "Neste gráfico, você verá as barras empilhadas que mostram o número de pessoas que bebem e não bebem, dentro de cada status de fumante (não fumante, ex-fumante e fumante). Isso oferece uma visão clara das proporções de cada grupo. Esse gráfico te dá uma visão mais precisa de como o consumo de álcool está relacionado ao status de fumante.";
+                "Neste gráfico, você verá as barras empilhadas que mostram o número de pessoas em cada categoria de consumo de álcool (bebedores e não bebedores), dentro de cada status de fumante (não fumante, ex-fumante e fumante). Isso oferece uma visão clara das proporções de cada grupo e como o consumo de álcool se relaciona ao status de fumante.";
             imagemSrc = "../static/imgs/relacao_fumante_e_bebedor.png";
             break;
     }
