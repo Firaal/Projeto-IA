@@ -114,7 +114,7 @@ header nav ul li a {
     cursor: pointer;
 }
 #formulario button:hover {
-    background-color: #000000;
+    background-color: #292929;
 }
 #formulario h2 {
     text-align: center;
@@ -141,7 +141,7 @@ header nav ul li a {
 }
 
 .options button:hover {
-    background-color: #000000;
+    background-color: #292929;
 }
 
 #graficoContainer img {

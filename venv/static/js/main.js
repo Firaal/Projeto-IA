@@ -23,16 +23,16 @@ function mostrarGrafico(grafico) {
             imagemSrc = "../static/imgs/heatmap.png";
             break;
         case "grafico4":
-            titulo = "Gráfico de Fumantes e Não Fumantes por Faixa Etária";
+            titulo = "Gráfico de Triglicerídeos por Consumo de Álcool";
             descricao =
                 "Este gráfico permitirá observar como o status de fumante varia entre diferentes faixas etárias, ajudando a identificar padrões de tabagismo.";
-            imagemSrc = "../static/imgs/fumantes-naoFumante-idade.png";
+            imagemSrc = "../static/imgs/triglicerideos_por_consumo.png";
             break;
         case "grafico5":
-            titulo = "Relação entre Glicose e Colesterol por Estado de Fumante";
+            titulo = "Relação entre Glicose e Colesterol por Consumo de Álcool";
             descricao =
                 "Este gráfico pode ajudar a entender se há uma relação entre os níveis de glicose e colesterol entre os diferentes grupos de fumantes, o que é crucial para a avaliação do risco cardiovascular e metabólico.";
-            imagemSrc = "../static/imgs/scatterplot-glicose-colesterol.png";
+            imagemSrc = "../static/imgs/scatterplot_glicose_colesterol.png";
             break;
         case "grafico6":
             titulo = "Gráfico de Barras Empilhadas para ver o consumo de Álcool por Faixa de Peso";
@@ -41,16 +41,10 @@ function mostrarGrafico(grafico) {
             imagemSrc = "../static/imgs/consumo-alcool-peso.png";
             break;
         case "grafico7":
-            titulo = "Gráfico de Barras para ver a média de Colesterol Total por Consumo de Álcool";
-            descricao =
-                "Ele permite uma comparação clara entre os níveis de colesterol médio dos consumidores e não consumidores de álcool. Se a barra dos consumidores for significativamente maior ou menor, isso pode indicar um padrão interessante sobre como o consumo de álcool pode influenciar os níveis de colesterol.";
-            imagemSrc = "../static/imgs/colesterol-alcool.png";
-            break;
-        case "grafico8":
-            titulo = "Gráfico de Barras para ver a média de Colesterol Total por Consumo de Álcool";
+            titulo = "Gráfico de Barras para ver a relação de fumantes e o consumo de álcool";
             descricao =
                 "Neste gráfico, você verá as barras empilhadas que mostram o número de pessoas que bebem e não bebem, dentro de cada status de fumante (não fumante, ex-fumante e fumante). Isso oferece uma visão clara das proporções de cada grupo. Esse gráfico te dá uma visão mais precisa de como o consumo de álcool está relacionado ao status de fumante.";
-            imagemSrc = "../static/imgs/relacao-alcool-fumante.png";
+            imagemSrc = "../static/imgs/relacao_fumante_e_bebedor.png";
             break;
     }
 
