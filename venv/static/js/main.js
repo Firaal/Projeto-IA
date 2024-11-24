@@ -19,19 +19,18 @@ function mostrarGrafico(grafico) {
             break;
         case "grafico3":
             titulo = "Heatmap";
-            descricao = "O heatmap permite visualizar as correlações entre as variáveis da base de dados, destacando relações mais fortes ou fracas entre elas.";
+            descricao =
+                "O heatmap permite visualizar as correlações entre as variáveis da base de dados, destacando relações mais fortes ou fracas entre elas.";
             imagemSrc = "../static/imgs/heatmap_por_consumo.png";
             break;
         case "grafico4":
             titulo = "Gráfico de Triglicerídeos por Consumo de Álcool";
-            descricao =
-                "Este gráfico permite observar como os níveis de triglicerídeo variam em relação ao consumo de álcool.";
+            descricao = "Este gráfico permite observar como os níveis de triglicerídeo variam em relação ao consumo de álcool.";
             imagemSrc = "../static/imgs/triglicerideos_por_consumo.png";
             break;
         case "grafico5":
             titulo = "Relação entre Glicose e Colesterol Total por Consumo de Álcool";
-            descricao =
-                "Este gráfico permite observar a relação entre os níveis de glicose e colesterol total com o consumo de álcool.";
+            descricao = "Este gráfico permite observar a relação entre os níveis de glicose e colesterol total com o consumo de álcool.";
             imagemSrc = "../static/imgs/scatterplot_glicose_colesterol.png";
             break;
         case "grafico6":

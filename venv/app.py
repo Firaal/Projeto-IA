@@ -1,7 +1,22 @@
 from flask import Flask, render_template, request
-import modelo_ia
+import pickle
 
 app = Flask(__name__)
+
+def import_model():
+    try:
+        with open('./venv/modelo.pkl', 'rb') as file:
+            modelo = pickle.load(file)
+        return modelo
+    except Exception as e:
+        print(f"Erro ao carregar o modelo: {e}")
+        return None
+
+modelo = import_model()
+
+if not modelo:
+    print("Falha ao carregar o modelo. Verifique o arquivo e tente novamente.")
+
 
 @app.route("/")
 def index():
@@ -9,28 +24,34 @@ def index():
 
 @app.route("/processar", methods=["POST"])
 def processar():
-    dados = {
-        "sexo": request.form.get("sexo"),
-        "idade": request.form.get("idade"),
-        "peso": request.form.get("peso"),
-        "pressao_sistolica": request.form.get("pressao_sistolica"),
-        "pressao_diastolica": request.form.get("pressao_diastolica"),
-        "glicose": request.form.get("glicose"),
-        "colesterol_total": request.form.get("colesterol_total"),
-        "colesterol_hdl": request.form.get("colesterol_hdl"),
-        "colesterol_ldl": request.form.get("colesterol_ldl"),
-        "triglicerideos": request.form.get("triglicerideos"),
-        "hemoglobina": request.form.get("hemoglobina"),
-        "proteina_urinaria": request.form.get("proteina_urinaria"),
-        "creatinina_serica": request.form.get("creatinina_serica"),
-        "ast": request.form.get("ast"),
-        "alt": request.form.get("alt"),
-        "gama_gt": request.form.get("gama_gt"),
-        "estado_fumante": request.form.get("estado_fumante"),
-        "bebedor_ou_nao": request.form.get("bebedor_ou_nao"),
-    }
+    dados = [
+        float(request.form.get("sexo")),
+        float(request.form.get("idade")),
+        float(request.form.get("peso")),
+        float(request.form.get("pressao_sistolica")),
+        float(request.form.get("pressao_diastolica")),
+        float(request.form.get("glicose")),
+        float(request.form.get("colesterol_total")),
+        float(request.form.get("colesterol_hdl")),
+        float(request.form.get("colesterol_ldl")),
+        float(request.form.get("triglicerideos")),
+        float(request.form.get("hemoglobina")),
+        float(request.form.get("proteina_urinaria")),
+        float(request.form.get("creatinina_serica")),
+        float(request.form.get("ast")),
+        float(request.form.get("alt")),
+        float(request.form.get("gama_gt")),
+        float(request.form.get("estado_fumante")),
+        float(request.form.get("bebedor_ou_nao")),
+    ]
     
-    resultado = modelo_ia.processar_dados(dados)
+    resultado = modelo.predict([dados])[0]
+    
+    if resultado == 0:
+        resultado = 'Você não é alcóolatra'
+    else:
+        resultado = 'Você é alcóolatra'
+
     return render_template("resultado.html", resultado=resultado)
 
 if __name__ == "__main__":
