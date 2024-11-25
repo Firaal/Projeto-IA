@@ -68,10 +68,10 @@
                     </div>
                 </section>
             </section>
-            <!-- Seção de Inputs -->
+
             <section id="formulario">
                 <h2>Envie seus Dados para a IA</h2>
-                <form id="inputForm" class="form-container">
+                <form action="/processar" method="POST" id="inputForm" class="form-container">
                     <div class="form-group">
                         <label for="sexo">Sexo:</label>
                         <select id="sexo" name="sexo" required>
@@ -145,13 +145,6 @@
                             <option value="1">Não Fumante</option>
                             <option value="2">Ex-Fumante</option>
                             <option value="3">Fumante</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="bebedor_ou_nao">Bebedor ou Não:</label>
-                        <select id="bebedor_ou_nao" name="bebedor_ou_nao" required>
-                            <option value="0">Não Bebedor</option>
-                            <option value="1">Bebedor</option>
                         </select>
                     </div>
                     <button type="submit">Enviar para a IA</button>

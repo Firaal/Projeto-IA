@@ -6,13 +6,13 @@
         <title>Resultado</title>
     </head>
     <body>
-        <h1>Resultado da IA</h1>
-        <p>Status: {{ resultado.status }}</p>
-        <p>Mensagem: {{ resultado.mensagem }}</p>
-        <h2>Dados Recebidos:</h2>
+        <h1>Resultado</h1>
+        <p>{{ resultado }}</p>
+
+        <h2>Dados Recebidos</h2>
         <ul>
-            {% for key, value in resultado.dados_recebidos.items() %}
-            <li>{{ key }}: {{ value }}</li>
+            {% for valor in dados_recebidos %}
+            <li>{{ valor }}</li>
             {% endfor %}
         </ul>
     </body>

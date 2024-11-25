@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request
 import pickle
+import xgboost
 
 app = Flask(__name__)
 
 def import_model():
     try:
-        with open('./venv/modelo.pkl', 'rb') as file:
+        with open('./venv/xgboost_treinado.pkl', 'rb') as file:
             modelo = pickle.load(file)
         return modelo
     except Exception as e:
@@ -18,7 +19,7 @@ if not modelo:
     print("Falha ao carregar o modelo. Verifique o arquivo e tente novamente.")
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
 
@@ -42,7 +43,6 @@ def processar():
         float(request.form.get("alt")),
         float(request.form.get("gama_gt")),
         float(request.form.get("estado_fumante")),
-        float(request.form.get("bebedor_ou_nao")),
     ]
     
     resultado = modelo.predict([dados])[0]
