@@ -1,0 +1,16 @@
+# Ignorar a pasta do ambiente virtual
+venv/
+
+*.dll
+
+# Ignorar arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar logs e arquivos temporários
+*.log
+*.tmp
+
+# Ignorar configurações do editor
+.vscode/
+.idea/
